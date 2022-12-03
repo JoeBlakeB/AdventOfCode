@@ -1,0 +1,28 @@
+name: README Badges
+on:    
+  workflow_dispatch:
+  push:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+          
+      - name: Advent of Code Badge # https://github.com/marketplace/actions/aoc-badges
+        uses: joblo2213/aoc-badges-action@v3
+        with:
+          userid: 2334371
+          session: ${{ secrets.AOC_SESSION }}
+          year: 2022
+          starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/Stars%20-)[0-9]+(?=_⭐-blue)'
+          file: README.md
+          
+      - name: Lines of Code Badge
+        run: bash -c 'sed -Ei "s/(https:\/\/img\.shields\.io\/badge\/Lines_of_Code-)[0-9]+(-blue)/https:\/\/img\.shields\.io\/badge\/Lines_of_Code-$(cat $(ls -1 | grep "[0-9].*py") | sed "/^\s*#/d;/^\s*$/d" | wc -l)-blue/g" README.md'
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update badges
+          file_pattern: README.md
+          commit_author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>

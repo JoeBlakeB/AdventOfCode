@@ -10,7 +10,6 @@ sumOfPriorities1 = 0
 sumOfPriorities2 = 0
 
 # Task 1
-
 for rucksack in elves:
     compartments = [
         rucksack[0:len(rucksack)//2],
@@ -21,7 +20,6 @@ for rucksack in elves:
             break
 
 # Task 2
-
 for i in range(0, len(elves), 3):
     group = elves[i:i+3]
     for item in group[0]:
@@ -29,5 +27,5 @@ for i in range(0, len(elves), 3):
             sumOfPriorities2 += alphabet.index(item) + 1
             break
             
-print(sumOfPriorities1) # 7980
-print(sumOfPriorities2) # 0
+print(sumOfPriorities1)
+print(sumOfPriorities2)

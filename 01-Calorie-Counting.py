@@ -2,7 +2,7 @@
 
 # Day 1: Calorie Counting
 
-with open('inputs/01.txt') as f:
+with open("inputs/01.txt") as f:
     data = f.read()
 
 # Part 1

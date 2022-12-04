@@ -2,7 +2,7 @@
 
 # Day 4: Camp Cleanup
 
-with open('inputs/04.txt') as f:
+with open("inputs/04.txt") as f:
     pairs = f.read().strip().split("\n")
 
 fullyContains = 0

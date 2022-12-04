@@ -2,7 +2,7 @@
 
 # Day 2: Rock Paper Scissors
 
-with open('inputs/02.txt') as f:
+with open("inputs/02.txt") as f:
     data = f.read().strip()
 
 score1 = 0
@@ -24,5 +24,5 @@ for game in data.split("\n"):
     # Task 2
     score2 += pointsForChoice[task2[player][0][opponent]] + task2[player][1]
 
-print(score1)
-print(score2)
+print("Task 1", score1)
+print("Task 2", score2)

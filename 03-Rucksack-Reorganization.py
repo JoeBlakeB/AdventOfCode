@@ -2,7 +2,7 @@
 
 # Day 3: Rucksack Reorganization
 
-with open('inputs/03.txt') as f:
+with open("inputs/03.txt") as f:
     elves = f.read().strip().split("\n")
 
 alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -27,5 +27,5 @@ for i in range(0, len(elves), 3):
             sumOfPriorities2 += alphabet.index(item) + 1
             break
             
-print(sumOfPriorities1)
-print(sumOfPriorities2)
+print("Task 1", sumOfPriorities1)
+print("Task 2", sumOfPriorities2)

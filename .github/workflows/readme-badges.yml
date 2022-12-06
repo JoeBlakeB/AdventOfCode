@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
           
       - name: Advent of Code Badge # https://github.com/marketplace/actions/aoc-badges
-        run: bash -c 'wget https://raw.githubusercontent.com/J0B10/aoc-badges-action/master/aoc-badges.py && if (echo "3da15cc87facd6ce192a3546efbd6dd23ba856a9f63bbcdd6149131a7dc4838e aoc-badges.py" | sha256sum --check) then INPUT_YEAR=2022 INPUT_SESSION=${{ secrets.AOC_SESSION }} INPUT_USERID=2334371 INPUT_DAYREGEX="\(?<=https:\/\/img\.shields\.io\/badge\/day%20-\)[0-9]+\(?=-blue\)" INPUT_STARSREGEX="\(?<=https:\/\/img\.shields\.io\/badge\/Stars%20-\)[0-9]+\(?=_⭐-blue\)" INPUT_DAYSCOMPLETEDEGEX="\(?<=https:\/\/img\.shields\.io\/badge\/days%20completed-\)[0-9]+\(?=-red\)"  python ./aoc-badges.py; fi'
+        run: bash -c 'wget https://raw.githubusercontent.com/J0B10/aoc-badges-action/master/aoc-badges.py && if (echo "3da15cc87facd6ce192a3546efbd6dd23ba856a9f63bbcdd6149131a7dc4838e aoc-badges.py" | sha256sum --check) then INPUT_YEAR=2022 INPUT_SESSION=${{ secrets.AOC_SESSION }} INPUT_USERID=2334371 INPUT_FILE="README.md" INPUT_DAYREGEX="(?<=https:\/\/img\.shields\.io\/badge\/day%20-)[0-9]+(?=-blue)" INPUT_STARSREGEX="(?<=https:\/\/img\.shields\.io\/badge\/Stars%20-)[0-9]+(?=_⭐-blue)" INPUT_DAYSCOMPLETEDREGEX="(?<=https:\/\/img\.shields\.io\/badge\/days%20completed-)[0-9]+(?=-red)"  python ./aoc-badges.py; fi'
           
       - name: Lines of Code Badge
         run: bash -c 'sed -Ei "s/(https:\/\/img\.shields\.io\/badge\/Lines_of_Code-)[0-9]+(-blue)/https:\/\/img\.shields\.io\/badge\/Lines_of_Code-$(cat $(ls -1 | grep "[0-9].*py") | sed "/^\s*#/d;/^\s*$/d" | wc -l)-blue/g" README.md'

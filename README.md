@@ -1,7 +1,7 @@
 # Advent of Code 2022
 
-![](https://img.shields.io/badge/Stars%20-30_⭐-blue)
-![](https://img.shields.io/badge/Lines_of_Code-598-blue)
+![](https://img.shields.io/badge/Stars%20-32_⭐-blue)
+![](https://img.shields.io/badge/Lines_of_Code-675-blue)
 
 My solutions for the [Advent of Code 2022](https://adventofcode.com/2022) challenges.
 

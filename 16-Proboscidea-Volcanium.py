@@ -69,3 +69,32 @@ print("The most pressure that can be released:",
     simulateValves("AA", 
         [v for v in valves.keys() if v != "AA"],
         0, 0, 30))
+
+# Split the list of valves into pairs of lists
+# Then go through each pair and calculate the pressure released
+# The elf and elephant can complete their list independently
+# Pressure released will then be combined for the total of that pair
+
+def findAllValveCombinations(valves):
+    combinations = [[[valves[0]], []]]
+    for valve in valves[1:]:
+        combinationsLeft = [[[a for a in b] for b in c] for c in combinations]
+        combinationsRight = [[[a for a in b] for b in c] for c in combinations]
+        for combination in combinationsLeft:
+            combination[0].append(valve)
+        for combination in combinationsRight:
+            combination[1].append(valve)
+        combinations = combinationsLeft + combinationsRight
+
+    return combinations
+
+allRoutes = findAllValveCombinations([v for v in valves.keys() if v != "AA"])
+
+highestPressureReleased = 0
+
+for i in range(len(allRoutes)):
+    print(f"Calculating with an elephant: {int((i/len(allRoutes))*100)}%", end="\r")
+    highestPressureReleased = max(highestPressureReleased, 
+        simulateValves("AA", allRoutes[i][0], 0, 0, 26) + simulateValves("AA", allRoutes[i][1], 0, 0, 26))
+
+print("Pressure released with an elephant helping:", highestPressureReleased)

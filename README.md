@@ -3,7 +3,7 @@
 </h1>
 
 ![](https://img.shields.io/badge/Total_Stars-52_⭐-blue)
-![](https://img.shields.io/badge/Total_Lines_of_Code-1252-blue)
+![](https://img.shields.io/badge/Total_Lines_of_Code-1295-blue)
 
 <!-- AOC TILES BEGIN -->
 <h1 align="center">
@@ -89,5 +89,8 @@
 </h1>
 <a href="2015/01-Not-Quite-Lisp.cpp">
   <img src=".github/AoCTiles/images/2015/01.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
+</a>
+<a href="2015/02-I-Was-Told-There-Would-Be-No-Maths.cpp">
+  <img src=".github/AoCTiles/images/2015/02.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
 </a>
 <!-- AOC TILES END -->

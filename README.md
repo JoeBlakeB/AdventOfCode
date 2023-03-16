@@ -2,8 +2,8 @@
   JoeBlakeB's Advent of Code Solutions
 </h1>
 
-![](https://img.shields.io/badge/Total_Stars-56_⭐-blue)
-![](https://img.shields.io/badge/Total_Lines_of_Code-1331-blue)
+![](https://img.shields.io/badge/Total_Stars-58_⭐-blue)
+![](https://img.shields.io/badge/Total_Lines_of_Code-1374-blue)
 
 <!-- AOC TILES BEGIN -->
 <h1 align="center">
@@ -85,7 +85,7 @@
   <img src=".github/AoCTiles/images/2022/25.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
 </a>
 <h1 align="center">
-  2015 - 6 ⭐
+  2015 - 8 ⭐
 </h1>
 <a href="2015/01-Not-Quite-Lisp.cpp">
   <img src=".github/AoCTiles/images/2015/01.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
@@ -95,5 +95,8 @@
 </a>
 <a href="2015/03-Perfectly-Spherical-Houses-in-a-Vacuum.cpp">
   <img src=".github/AoCTiles/images/2015/03.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
+</a>
+<a href="2015/04-The-Ideal-Stocking-Stuffer.cpp">
+  <img src=".github/AoCTiles/images/2015/04.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
 </a>
 <!-- AOC TILES END -->

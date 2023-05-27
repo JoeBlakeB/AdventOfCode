@@ -26,17 +26,22 @@ fi
 
 mkdir -p "$buildpath/${filename%/*}"
 
-# Check the files hash against last time it was built
+# Get a list of all files to check for changes that are included in the c++ file
 
-currentHash=$(sha256sum "$filename")
+files=$(grep -oP '#include\s*"\K[^"]*' "$filename" |
+        sed "s/^/${filename%/*}\//")
+
+# Check all files hashes against last time it was built
+
+currentHashes=$(printf "$filename\n$files" | tr '\n' '\0' | xargs -0 sha256sum)
 
 if [ -f "$buildpath$filename".txt ] && [ -f "$buildpath$compiledname" ]; then
-    previousHash=$(cat "$buildpath$filename".txt)
+    previousHashes=$(cat "$buildpath$filename".txt)
 fi
 
 # Recompile c++ file if needed, then run
 
-if [ ! "$currentHash" == "$previousHash" ]; then
+if [ ! "$currentHashes" == "$previousHashes" ]; then
     g++ -std=c++17 -Wall -Wextra -Wpedantic -O3 -lssl -lcrypto -o "$buildpath$compiledname" "$filename"
 
     exitCode=$?
@@ -47,7 +52,7 @@ if [ ! "$currentHash" == "$previousHash" ]; then
         fi
         exit $exitCode
     fi
-    echo -n "$currentHash" > "$buildpath$filename".txt
+    echo -n "$currentHashes" > "$buildpath$filename".txt
 fi
 
 "$buildpath$compiledname" "${@:2}"

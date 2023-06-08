@@ -2,8 +2,8 @@
   JoeBlakeB's Advent of Code Solutions
 </h1>
 
-![](https://img.shields.io/badge/Total_Stars-72_⭐-blue)
-![](https://img.shields.io/badge/Total_Lines_of_Code-1828-blue)
+![](https://img.shields.io/badge/Total_Stars-74_⭐-blue)
+![](https://img.shields.io/badge/Total_Lines_of_Code-1894-blue)
 
 <!-- AOC TILES BEGIN -->
 <h1 align="center">
@@ -85,7 +85,7 @@
   <img src=".github/AoCTiles/images/2022/25.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
 </a>
 <h1 align="center">
-  2015 - 22 ⭐
+  2015 - 24 ⭐
 </h1>
 <a href="2015/01-Not-Quite-Lisp.cpp">
   <img src=".github/AoCTiles/images/2015/01.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
@@ -119,5 +119,8 @@
 </a>
 <a href="2015/11-Corporate-Policy.cpp">
   <img src=".github/AoCTiles/images/2015/11.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
+</a>
+<a href="2015/12-JSAbacusFramework.cpp">
+  <img src=".github/AoCTiles/images/2015/12.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
 </a>
 <!-- AOC TILES END -->

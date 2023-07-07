@@ -19,11 +19,11 @@ class Map {
         }
     }
 
-    std::pair<std::string, uint> findRoute(bool shortest) {
-        std::pair<std::string, uint> shortestRoute = {"", shortest ? -1 : 0};
+    std::pair<std::string, unsigned int> findRoute(bool shortest) {
+        std::pair<std::string, unsigned int> shortestRoute = {"", shortest ? -1 : 0};
 
         for (std::string location : locations) {
-            std::pair<std::string, uint> route =
+            std::pair<std::string, unsigned int> route =
                 findShortestRouteRecursive(location, visitLocation(locations, location), shortest);
             if ((shortest && route.second < shortestRoute.second) ||
                 (!shortest && route.second > shortestRoute.second)) {
@@ -35,7 +35,7 @@ class Map {
 
   private:
     std::vector<std::string> locations;
-    std::map<std::string, uint> distances;
+    std::map<std::string, unsigned int> distances;
 
     void addLocation(std::string location) {
         if (std::find(locations.begin(), locations.end(), location) == locations.end()) {
@@ -64,7 +64,7 @@ class Map {
         return nowUnvisited;
     }
 
-    std::pair<std::string, uint> findShortestRouteRecursive(
+    std::pair<std::string, unsigned int> findShortestRouteRecursive(
         std::string currentLocation,
         std::vector<std::string> unvisitedLocations,
         bool shortest
@@ -76,12 +76,12 @@ class Map {
                                        unvisitedLocations[0])]
             };
         } else {
-            std::pair<std::string, uint> shortestNextRoute = {"", shortest ? -1 : 0};
+            std::pair<std::string, unsigned int> shortestNextRoute = {"", shortest ? -1 : 0};
 
             for (std::string location : unvisitedLocations) {
-                std::pair<std::string, uint> route =
+                std::pair<std::string, unsigned int> route =
                     findShortestRouteRecursive(location, visitLocation(unvisitedLocations, location), shortest);
-                uint distanceToNextLocation = distances[locationPair(currentLocation, location)];
+                unsigned int distanceToNextLocation = distances[locationPair(currentLocation, location)];
                 if ((shortest && route.second + distanceToNextLocation < shortestNextRoute.second) ||
                     (!shortest && route.second + distanceToNextLocation > shortestNextRoute.second)) {
                     shortestNextRoute = route;
@@ -98,9 +98,9 @@ class Map {
 
 int main() {
     Map map(getInputLinesVector());
-    std::pair<std::string, uint> shortestRoute = map.findRoute(true);
+    std::pair<std::string, unsigned int> shortestRoute = map.findRoute(true);
     std::cout << shortestRoute.first << " = " << shortestRoute.second << std::endl;
-    std::pair<std::string, uint> longestRoute = map.findRoute(false);
+    std::pair<std::string, unsigned int> longestRoute = map.findRoute(false);
     std::cout << longestRoute.first << " = " << longestRoute.second << std::endl;
 
     return 0;

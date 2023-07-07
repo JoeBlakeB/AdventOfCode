@@ -10,7 +10,7 @@ class Circuit {
   public:
     void calculateWireStrengths(std::vector<std::string> unresolved) {
         while (unresolved.size() > 0) {
-            uint lastSize = unresolved.size();
+            unsigned int lastSize = unresolved.size();
 
             for (auto it = unresolved.begin(); it != unresolved.end();) {
                 if (calculateInstruction(*it)) {
@@ -121,7 +121,7 @@ class Circuit {
         }
     }
 
-    std::map<std::string, ushort> resolvedValues;
+    std::map<std::string, unsigned short> resolvedValues;
 };
 
 int main() {

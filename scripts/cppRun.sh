@@ -42,7 +42,16 @@ fi
 # Recompile c++ file if needed, then run
 
 if [ ! "$currentHashes" == "$previousHashes" ]; then
-    g++ -std=c++17 -Wall -Wextra -Wpedantic -O3 -lssl -lcrypto -o "$buildpath$compiledname" "$filename"
+
+    # Only include ssl and crypto if required
+    
+    if grep -q "#include <openssl" "$filename"; then
+        openssl="-lssl -lcrypto"
+    fi
+
+    # Compile
+
+    g++ -std=c++17 -Wall -Wextra -Wpedantic -O3 $openssl -o "$buildpath$compiledname" "$filename"
 
     exitCode=$?
     if [ ! $exitCode -eq 0 ]; then

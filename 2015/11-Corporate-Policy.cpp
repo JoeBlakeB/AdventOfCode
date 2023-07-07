@@ -3,7 +3,7 @@
 using namespace std;
 
 void incrementPassword(string &password) {
-    uint i = password.size() - 1;
+    unsigned int i = password.size() - 1;
     password[i] += 1;
     while (password[i] == '{') {
         password[i--] = 'a';
@@ -12,7 +12,7 @@ void incrementPassword(string &password) {
 }
 
 bool passwordContainsIncreasingStraight(string &password) {
-    for (ushort i = 0; i < password.size() - 2; ++i) {
+    for (unsigned short i = 0; i < password.size() - 2; ++i) {
         if (password[i] + 1 == password[i + 1] &&
             password[i] + 2 == password[i + 2])
             return true;
@@ -21,7 +21,7 @@ bool passwordContainsIncreasingStraight(string &password) {
 }
 
 bool passwordDoesntContainConfusingLetters(string &password) {
-    for (ushort i = 0; i < password.size(); ++i) {
+    for (unsigned short i = 0; i < password.size(); ++i) {
         if (password[i] == 'i' || password[i] == 'o' || password[i] == 'l')
             return false;
     }
@@ -29,8 +29,8 @@ bool passwordDoesntContainConfusingLetters(string &password) {
 }
 
 bool passwordContainsTwoPairs(string &password) {
-    ushort pairCount = 0;
-    for (ushort i = 1; i < password.size(); ++i) {
+    unsigned short pairCount = 0;
+    for (unsigned short i = 1; i < password.size(); ++i) {
         if (password[i-1] == password[i]) {
             ++pairCount;
             ++i;

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include <vector>
 
 using namespace std;
@@ -33,7 +34,7 @@ int countAllNumbersIgnoreRed(string data) {
 
     vector<Depth> levels;
 
-    for (uint i = 0; i < data.size(); ++i) {
+    for (unsigned int i = 0; i < data.size(); ++i) {
         char character = data[i];
 
         if (character == '{' || character == '[') {

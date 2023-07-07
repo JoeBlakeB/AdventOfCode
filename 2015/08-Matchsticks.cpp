@@ -5,7 +5,7 @@
 
 std::string decodeString(std::string original) {
     std::string decodedString = "";
-    for (uint i = 1; i < original.size() - 1; ++i) {
+    for (unsigned int i = 1; i < original.size() - 1; ++i) {
         if (original[i] == '\\') {
             if (original[i+1] == 'x') {
                 decodedString += static_cast<char>(
@@ -23,7 +23,7 @@ std::string decodeString(std::string original) {
 
 std::string encodeString(std::string original) {
     std::string encodedString = "\"";
-    for (uint i = 0; i < original.size(); ++i) {
+    for (unsigned int i = 0; i < original.size(); ++i) {
         if (original[i] == '"' || original[i] == '\\') {
             encodedString += '\\';
         }
@@ -34,9 +34,9 @@ std::string encodeString(std::string original) {
 
 int main() {
     std::vector<std::string> inputLines = getInputLinesVector();
-    uint originalSize = 0;
-    uint decodedSize = 0;
-    uint encodedSize = 0;
+    unsigned int originalSize = 0;
+    unsigned int decodedSize = 0;
+    unsigned int encodedSize = 0;
 
     for (std::string line : inputLines) {
         originalSize += line.size();

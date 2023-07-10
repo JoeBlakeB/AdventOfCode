@@ -2,8 +2,8 @@
   JoeBlakeB's Advent of Code Solutions
 </h1>
 
-![](https://img.shields.io/badge/Total_Stars-78_⭐-blue)
-![](https://img.shields.io/badge/Total_Lines_of_Code-2004-blue)
+![](https://img.shields.io/badge/Total_Stars-80_⭐-blue)
+![](https://img.shields.io/badge/Total_Lines_of_Code-2086-blue)
 
 <!-- AOC TILES BEGIN -->
 <h1 align="center">
@@ -85,7 +85,7 @@
   <img src=".github/AoCTiles/images/2022/25.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
 </a>
 <h1 align="center">
-  2015 - 28 ⭐
+  2015 - 30 ⭐
 </h1>
 <a href="2015/01-Not-Quite-Lisp.cpp">
   <img src=".github/AoCTiles/images/2015/01.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
@@ -128,5 +128,8 @@
 </a>
 <a href="2015/14-Reindeer-Olympics.cpp">
   <img src=".github/AoCTiles/images/2015/14.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
+</a>
+<a href="2015/15-Science-for-Hungry-People.cpp">
+  <img src=".github/AoCTiles/images/2015/15.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
 </a>
 <!-- AOC TILES END -->

@@ -2,10 +2,12 @@
 #include <string>
 #include <vector>
 
-std::vector<std::string> getInputLinesVector() {
-    std::vector<std::string> inputLines;
-    std::string line;
-    while (std::getline(std::cin, line)) {
+using namespace std;
+
+vector<string> getInputLinesVector() {
+    vector<string> inputLines;
+    string line;
+    while (getline(std::cin, line) && line != "") {
         inputLines.push_back(line);
     }
     return inputLines;

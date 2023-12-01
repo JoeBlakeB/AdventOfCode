@@ -124,9 +124,6 @@ TILE_WIDTH_PX = "161px"
 # This results in the parent folder of the script file
 AOC_TILES_SCRIPT_DIR = Path(__file__).absolute().parent
 
-# Cache path is a subfolder of the AOC folder, it includes the personal leaderboards for each year
-CACHE_DIR = AOC_TILES_SCRIPT_DIR / "aoc_tiles_cache"
-
 # Overrides day 24 part 2 and day 25 both parts to be unsolved
 DEBUG = False
 
@@ -176,41 +173,26 @@ def find_recursive_solution_files(directory: Path) -> list[Path]:
     return solution_paths
 
 
-def parse_leaderboard(leaderboard_path: Path) -> dict[int, DayScores]:
+def parse_leaderboard(html: Path) -> dict[int, DayScores]:
     no_stars = "You haven't collected any stars... yet."
     start = '<span class="leaderboard-daydesc-both"> *Time *Rank *Score</span>\n'
     end = "</pre>"
-    with open(leaderboard_path) as file:
-        html = file.read()
-        if no_stars in html:
-            return {}
-        matches = re.findall(rf"{start}(.*?){end}", html, re.DOTALL | re.MULTILINE)
-        assert len(matches) == 1, f"Found {'no' if len(matches) == 0 else 'more than one'} leaderboard?!"
-        table_rows = matches[0].strip().split("\n")
-        leaderboard = {}
-        for line in table_rows:
-            day, *scores = re.split(r"\s+", line.strip())
-            # replace "-" with None to be able to handle the data later, like if no score existed for the day
-            scores = [s if s != "-" else None for s in scores]
-            assert len(scores) in (3, 6), f"Number scores for {day=} ({scores}) are not 3 or 6."
-            leaderboard[int(day)] = DayScores(*scores)
-        return leaderboard
+    if no_stars in html:
+        return {}
+    matches = re.findall(rf"{start}(.*?){end}", html, re.DOTALL | re.MULTILINE)
+    assert len(matches) == 1, f"Found {'no' if len(matches) == 0 else 'more than one'} leaderboard?!"
+    table_rows = matches[0].strip().split("\n")
+    leaderboard = {}
+    for line in table_rows:
+        day, *scores = re.split(r"\s+", line.strip())
+        # replace "-" with None to be able to handle the data later, like if no score existed for the day
+        scores = [s if s != "-" else None for s in scores]
+        assert len(scores) in (3, 6), f"Number scores for {day=} ({scores}) are not 3 or 6."
+        leaderboard[int(day)] = DayScores(*scores)
+    return leaderboard
 
 
 def request_leaderboard(year: int) -> dict[int, DayScores]:
-    leaderboard_path = CACHE_DIR / f"leaderboard{year}.html"
-    if leaderboard_path.exists():
-        leaderboard = parse_leaderboard(leaderboard_path)
-        # less_than_30mins = time.time() - leaderboard_path.lstat().st_mtime < 60 * 30
-        # if less_than_30mins:
-        #     print(f"Leaderboard for {year} is younger than 30 minutes, skipping download in order to avoid DDOS.")
-        #     return leaderboard
-        has_no_none_values = all(itertools.chain(map(list, leaderboard.values())))
-        if has_no_none_values and len(leaderboard) == 25:
-            print(f"Leaderboard for {year} is complete, no need to download.")
-            return leaderboard
-    # with open(SESSION_COOKIE_PATH) as cookie_file:
-        # session_cookie = cookie_file.read().strip()
     session_cookie = os.environ["AOC_SESSION_COOKIE"]
     assert len(session_cookie) == 128, f"Session cookie is not 128 characters long, make sure to remove the prefix!"
 
@@ -219,10 +201,8 @@ def request_leaderboard(year: int) -> dict[int, DayScores]:
         headers={"User-Agent": "https://github.com/LiquidFun/adventofcode by Brutenis Gliwa"},
         cookies={"session": session_cookie},
     ).text
-    leaderboard_path.parent.mkdir(exist_ok=True, parents=True)
-    with open(leaderboard_path, "w") as file:
-        file.write(data)
-    return parse_leaderboard(leaderboard_path)
+    
+    return parse_leaderboard(data)
 
 
 class HTMLTag:
@@ -418,17 +398,8 @@ def handle_year(year: int, day_to_solutions: dict[int, list[str]]):
     fill_empty_days_in_dict(day_to_solutions, max_day)
 
     completed_solutions = dict()
-    completed_cache_path = CACHE_DIR / f"completed-{year}.json"
-    if completed_cache_path.exists():
-        with open(completed_cache_path, "r") as file:
-            completed_solutions = {int(day): solutions for day, solutions in json.load(file).items()}
-
     for day, solutions in sorted(day_to_solutions.items()):
         handle_day(day, year, solutions, html, leaderboard.get(day), completed_solutions.get(day) != solutions)
-
-    with open(completed_cache_path, "w") as file:
-        completed_days = [day for day, scores in leaderboard.items() if scores.time2 is not None]
-        file.write(json.dumps({day: solutions for day, solutions in day_to_solutions.items() if day in completed_days}))
 
     with open(README_PATH, "r", encoding="utf-8") as file:
         text = file.read()

@@ -2,10 +2,16 @@
   JoeBlakeB's Advent of Code Solutions
 </h1>
 
-![](https://img.shields.io/badge/Total_Stars-92_⭐-blue)
-![](https://img.shields.io/badge/Total_Lines_of_Code-2531-blue)
+![](https://img.shields.io/badge/Total_Stars-94_⭐-blue)
+![](https://img.shields.io/badge/Total_Lines_of_Code-2569-blue)
 
 <!-- AOC TILES BEGIN -->
+<h1 align="center">
+  2023 - 2 ⭐
+</h1>
+<a href="2023/01-Trebuchet.py">
+  <img src=".github/AoCTiles/images/2023/01.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
+</a>
 <h1 align="center">
   2022 - 50 ⭐
 </h1>

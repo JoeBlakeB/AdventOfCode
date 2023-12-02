@@ -2,7 +2,7 @@
 
 # Advent of Code 2023 - Day 1: Trebuchet?!
 # Usage:
-#     python 2023/01.py < 2023/inputs/01.txt
+#     python 2023/01-Trebuchet.py < 2023/inputs/01.txt
 
 import fileinput
 inputSplit = list(fileinput.input())

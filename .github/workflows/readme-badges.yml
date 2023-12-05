@@ -1,7 +1,7 @@
 name: README Badges
 on:    
   workflow_dispatch:
-  push:
+  # push:
 
 jobs:
   update:

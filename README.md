@@ -18,7 +18,7 @@
 <a href="2023/03-Gear-Ratios.py">
   <img src=".github/AoCTiles/images/2023/03.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
 </a>
-<a href="None">
+<a href="2023/04-Scratchcards.cpp">
   <img src=".github/AoCTiles/images/2023/04.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
 </a>
 <a href="None">

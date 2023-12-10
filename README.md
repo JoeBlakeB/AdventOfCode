@@ -2,12 +2,12 @@
   JoeBlakeB's Advent of Code Solutions
 </h1>
 
-![](https://img.shields.io/badge/Total_Stars-108_⭐-blue)
-![](https://img.shields.io/badge/Total_Lines_of_Code-2946-blue)
+![](https://img.shields.io/badge/Total_Stars-112_⭐-blue)
+![](https://img.shields.io/badge/Total_Lines_of_Code-3057-blue)
 
 <!-- AOC TILES BEGIN -->
 <h1 align="center">
-  2023 - 18 ⭐
+  2023 - 20 ⭐
 </h1>
 <a href="2023/01-Trebuchet.py">
   <img src=".github/AoCTiles/images/2023/01.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
@@ -35,6 +35,9 @@
 </a>
 <a href="2023/09-Mirage-Maintenance.py">
   <img src=".github/AoCTiles/images/2023/09.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
+</a>
+<a href="2023/10-Pipe-Maze.py">
+  <img src=".github/AoCTiles/images/2023/10.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
 </a>
 <h1 align="center">
   2022 - 50 ⭐
@@ -113,5 +116,71 @@
 </a>
 <a href="2022/25-Full-of-Hot-Air.py">
   <img src=".github/AoCTiles/images/2022/25.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
+</a>
+<h1 align="center">
+  2015 - 42 ⭐
+</h1>
+<a href="2015/01-Not-Quite-Lisp.cpp">
+  <img src=".github/AoCTiles/images/2015/01.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
+</a>
+<a href="2015/02-I-Was-Told-There-Would-Be-No-Maths.cpp">
+  <img src=".github/AoCTiles/images/2015/02.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
+</a>
+<a href="2015/03-Perfectly-Spherical-Houses-in-a-Vacuum.cpp">
+  <img src=".github/AoCTiles/images/2015/03.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
+</a>
+<a href="2015/04-The-Ideal-Stocking-Stuffer.cpp">
+  <img src=".github/AoCTiles/images/2015/04.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
+</a>
+<a href="2015/05-Doesnt-He-Have-Intern-Elves-For-This.cpp">
+  <img src=".github/AoCTiles/images/2015/05.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
+</a>
+<a href="2015/06-Probably-a-Fire-Hazard.cpp">
+  <img src=".github/AoCTiles/images/2015/06.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
+</a>
+<a href="2015/07-Some-Assembly-Required.cpp">
+  <img src=".github/AoCTiles/images/2015/07.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
+</a>
+<a href="2015/08-Matchsticks.cpp">
+  <img src=".github/AoCTiles/images/2015/08.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
+</a>
+<a href="2015/09-All-in-a-Single-Night.cpp">
+  <img src=".github/AoCTiles/images/2015/09.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
+</a>
+<a href="2015/10-Elves-Look-Elves-Say.cpp">
+  <img src=".github/AoCTiles/images/2015/10.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
+</a>
+<a href="2015/11-Corporate-Policy.cpp">
+  <img src=".github/AoCTiles/images/2015/11.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
+</a>
+<a href="2015/12-JSAbacusFramework.cpp">
+  <img src=".github/AoCTiles/images/2015/12.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
+</a>
+<a href="2015/13-Knights-of-the-Dinner-Table.cpp">
+  <img src=".github/AoCTiles/images/2015/13.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
+</a>
+<a href="2015/14-Reindeer-Olympics.cpp">
+  <img src=".github/AoCTiles/images/2015/14.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
+</a>
+<a href="2015/15-Science-for-Hungry-People.cpp">
+  <img src=".github/AoCTiles/images/2015/15.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
+</a>
+<a href="2015/16-aunt-sue.cpp">
+  <img src=".github/AoCTiles/images/2015/16.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
+</a>
+<a href="2015/17-No-Such-Thing-as-Too-Much.cpp">
+  <img src=".github/AoCTiles/images/2015/17.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
+</a>
+<a href="2015/18-Like-a-GIF-For-Your-Yard.cpp">
+  <img src=".github/AoCTiles/images/2015/18.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
+</a>
+<a href="2015/19-Medicine-for-Rudolph.cpp">
+  <img src=".github/AoCTiles/images/2015/19.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
+</a>
+<a href="2015/20-Infinite-Elves-and-Infinite-Houses.cpp">
+  <img src=".github/AoCTiles/images/2015/20.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
+</a>
+<a href="2015/21-RPG-Simulator-20XX.cpp">
+  <img src=".github/AoCTiles/images/2015/21.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
 </a>
 <!-- AOC TILES END -->

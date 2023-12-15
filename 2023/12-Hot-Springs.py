@@ -5,46 +5,52 @@
 #     python 2023/12-Hot-Springs.py < 2023/inputs/12.txt
 
 import sys
-from itertools import product
-
 
 INPUT_LINES = [line.strip() for line in sys.stdin if line.strip()]
 
 
-def isArrangementPossible(arrangement: list[str], damagedGroups: list[int]) -> bool:
-    thisArrangementsGroups = [0]
-    for char in arrangement:
-        if char == "#":
-            thisArrangementsGroups[-1] += 1
-        elif thisArrangementsGroups[-1]:
-            thisArrangementsGroups.append(0)
+def countPossibleArrangements(springs: list[str], damagedGroups: list[int]) -> int:
+    states = "." + ".".join(["#" * group for group in damagedGroups]) + "."
+
+    previousDict = {0: 1}
+    nextDict = {}
+    for char in springs:
+        for stateIndex, count in previousDict.items():
+            if char == "?":
+                if stateIndex + 1 < len(states):
+                    nextDict[stateIndex + 1] = nextDict.get(stateIndex + 1, 0) + count
+                if states[stateIndex] == ".":
+                    nextDict[stateIndex] = nextDict.get(stateIndex, 0) + count
+
+            elif char == ".":
+                if stateIndex + 1 < len(states) and states[stateIndex + 1] == ".":
+                    nextDict[stateIndex + 1] = nextDict.get(stateIndex + 1, 0) + count
+                if states[stateIndex] == ".":
+                    nextDict[stateIndex] = nextDict.get(stateIndex, 0) + count
+
+            elif char == "#":
+                if stateIndex + 1 < len(states) and states[stateIndex + 1] == "#":
+                    nextDict[stateIndex + 1] = nextDict.get(stateIndex + 1, 0) + count
+        
+        previousDict = nextDict
+        nextDict = {}
     
-    if not thisArrangementsGroups[-1]:
-        thisArrangementsGroups.pop(-1)
-    
-    return thisArrangementsGroups == damagedGroups
+    return previousDict.get(len(states) - 1, 0) + previousDict.get(len(states) - 2, 0)
 
 
-def getNumberOfDifferentArrangements(line: str) -> int:
+
+beforeUnfolding = 0
+afterUnfolding = 0
+for line in INPUT_LINES:
     damagedGroups: list[int] = [int(num) for num in line.split()[1].split(",")]
     springsString = line.split()[0]
-    springsList = []
-    unknownSpringsCount = 0
-    for spring in springsString:
-        if spring == "?":
-            springsList.append(unknownSpringsCount)
-            unknownSpringsCount += 1
-        else:
-            springsList.append(spring)
-    
-    possibleCombinations = 0
-    for possibleSprings in product(".#", repeat=unknownSpringsCount):
-        possibleCombinations += isArrangementPossible(
-            [possibleSprings[i] if type(i) == int else i for i in springsList],
-            damagedGroups)
-
-    return possibleCombinations
+    beforeUnfolding += countPossibleArrangements(
+        springsString, damagedGroups)
+    afterUnfolding += countPossibleArrangements(
+        "?".join([springsString] * 5), damagedGroups * 5)
 
 
-print("Total Number of Arrangements:",
-    sum([getNumberOfDifferentArrangements(line) for line in INPUT_LINES]))
+print("Total Number of Arrangements:", beforeUnfolding)
+
+print("Total Number of Arrangements After Unfolding:", afterUnfolding)
+

@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright (C) 2023 Joe Baker (JoeBlakeB)
+# Copyright (C) 2024 Joe Baker (JoeBlakeB)
 # This program is free software under the GPLv3 license.
 #
 
@@ -51,7 +51,7 @@ if [ ! "$currentHashes" == "$previousHashes" ]; then
 
     # Compile
 
-    g++ -std=c++17 -Wall -Wextra -Wpedantic -O3 $openssl -o "$buildpath$compiledname" "$filename"
+    g++ -std=c++23 -Wall -Wextra -Wpedantic -O3 $openssl -o "$buildpath$compiledname" "$filename"
 
     exitCode=$?
     if [ ! $exitCode -eq 0 ]; then

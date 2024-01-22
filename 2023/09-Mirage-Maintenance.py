@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+# Copyright (C) 2023 Joe Baker (JoeBlakeB)
 # Advent of Code 2023 - Day 9: Mirage Maintenance
 # Usage:
 #     python 2023/09-Mirage-Maintenance.py < 2023/inputs/09.txt

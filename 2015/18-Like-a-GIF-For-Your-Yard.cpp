@@ -1,3 +1,8 @@
+// Copyright (C) 2023 Joe Baker (JoeBlakeB)
+// Advent of Code 2015 - Day 18: Like a GIF For Your Yard
+// Usage:
+//     scripts/cppRun.sh 2015/18-Like-a-GIF-For-Your-Yard.cpp < 2015/inputs/18.txt
+
 #include <iostream>
 #include <vector>
 

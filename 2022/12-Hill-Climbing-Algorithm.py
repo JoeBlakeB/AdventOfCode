@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+# Copyright (C) 2022 Joe Baker (JoeBlakeB)
 # Day 12: Hill Climbing Algorithm
 
 with open("inputs/12.txt") as f:

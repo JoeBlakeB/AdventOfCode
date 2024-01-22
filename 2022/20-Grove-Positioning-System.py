@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+# Copyright (C) 2022 Joe Baker (JoeBlakeB)
 # Day 20: Grove Positioning System
 
 with open("inputs/20.txt") as f:

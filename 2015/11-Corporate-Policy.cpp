@@ -1,3 +1,8 @@
+// Copyright (C) 2023 Joe Baker (JoeBlakeB)
+// Advent of Code 2015 - Day 11: Corporate Policy
+// Usage:
+//     scripts/cppRun.sh 2015/11-Corporate-Policy.cpp < 2015/inputs/11.txt
+
 #include <iostream>
 
 using namespace std;

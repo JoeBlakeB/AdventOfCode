@@ -1,4 +1,10 @@
+// Copyright (C) 2023 Joe Baker (JoeBlakeB)
+// Advent of Code 2015 - Day 21: RPG Simulator 20XX
+// Usage:
+//     scripts/cppRun.sh 2015/21-RPG-Simulator-20XX.cpp < 2015/inputs/21.txt
+
 #include <array>
+#include <climits>
 #include <iostream>
 #include <sstream>
 #include <string>

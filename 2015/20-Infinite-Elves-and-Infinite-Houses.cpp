@@ -1,3 +1,8 @@
+// Copyright (C) 2023 Joe Baker (JoeBlakeB)
+// Advent of Code 2015 - Day 20: Infinite Elves and Infinite Houses
+// Usage:
+//     scripts/cppRun.sh 2015/20-Infinite-Elves-and-Infinite-Houses.cpp < 2015/inputs/20.txt
+
 #include <iostream>
 
 using namespace std;

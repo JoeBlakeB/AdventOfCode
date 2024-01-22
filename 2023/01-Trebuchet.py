@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+# Copyright (C) 2023 Joe Baker (JoeBlakeB)
 # Advent of Code 2023 - Day 1: Trebuchet?!
 # Usage:
 #     python 2023/01-Trebuchet.py < 2023/inputs/01.txt

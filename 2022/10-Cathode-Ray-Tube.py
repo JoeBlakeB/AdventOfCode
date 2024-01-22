@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+# Copyright (C) 2022 Joe Baker (JoeBlakeB)
 # Day 10: Cathode-Ray Tube
 
 with open("inputs/10.txt") as f:

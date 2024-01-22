@@ -1,3 +1,8 @@
+// Copyright (C) 2023 Joe Baker (JoeBlakeB)
+// Advent of Code 2015 - Day 08: Matchsticks
+// Usage:
+//     scripts/cppRun.sh 2015/08-Matchsticks.cpp < 2015/inputs/08.txt
+
 #include <iostream>
 #include <vector>
 

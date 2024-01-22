@@ -1,3 +1,4 @@
+// Copyright (C) 2023 Joe Baker (JoeBlakeB)
 // Advent of Code 2023 - Day 4: Scratchcards
 // Usage:
 //     scripts/cppRun.sh 2023/04-Scratchcards.cpp < 2023/inputs/04.txt

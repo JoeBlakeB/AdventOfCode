@@ -3,7 +3,7 @@
 </h1>
 
 ![](https://img.shields.io/badge/Total_Stars-127_⭐-blue)
-![](https://img.shields.io/badge/Total_Lines_of_Code-3476-blue)
+![](https://img.shields.io/badge/Total_Lines_of_Code-3541-blue)
 
 <!-- AOC TILES BEGIN -->
 <h1 align="center">
@@ -210,7 +210,7 @@
 <a href="2015/15-Science-for-Hungry-People.cpp">
   <img src=".github/AoCTiles/images/2015/15.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
 </a>
-<a href="2015/16-aunt-sue.cpp">
+<a href="2015/16-Aunt-Sue.cpp">
   <img src=".github/AoCTiles/images/2015/16.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
 </a>
 <a href="2015/17-No-Such-Thing-as-Too-Much.cpp">

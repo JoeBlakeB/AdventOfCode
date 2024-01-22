@@ -1,3 +1,8 @@
+// Copyright (C) 2023 Joe Baker (JoeBlakeB)
+// Advent of Code 2015 - Day 05: Doesn't He Have Intern-Elves For This?
+// Usage:
+//     scripts/cppRun.sh 2015/05-Doesnt-He-Have-Intern-Elves-For-This.cpp < 2015/inputs/05.txt
+
 #include <algorithm>
 #include <iostream>
 #include <map>

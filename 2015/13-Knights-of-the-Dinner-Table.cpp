@@ -1,4 +1,10 @@
+// Copyright (C) 2023 Joe Baker (JoeBlakeB)
+// Advent of Code 2015 - Day 13: Knights of the Dinner Table
+// Usage:
+//     scripts/cppRun.sh 2015/13-Knights-of-the-Dinner-Table.cpp < 2015/inputs/13.txt
+
 #include <algorithm>
+#include <climits>
 #include <iostream>
 #include <map>
 #include <sstream>

@@ -1,3 +1,8 @@
+// Copyright (C) 2023 Joe Baker (JoeBlakeB)
+// Advent of Code 2015 - Day 15: Science for Hungry People
+// Usage:
+//     scripts/cppRun.sh 2015/15-Science-for-Hungry-People.cpp < 2015/inputs/15.txt
+
 #include <array>
 #include <iostream>
 #include <sstream>

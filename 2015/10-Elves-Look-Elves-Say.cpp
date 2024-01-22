@@ -1,3 +1,8 @@
+// Copyright (C) 2023 Joe Baker (JoeBlakeB)
+// Advent of Code 2015 - Day 10: Elves Look, Elves Say
+// Usage:
+//     scripts/cppRun.sh 2015/10-Elves-Look-Elves-Say.cpp < 2015/inputs/10.txt
+
 #include <iostream>
 #include <string>
 

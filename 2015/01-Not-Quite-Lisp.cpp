@@ -1,3 +1,8 @@
+// Copyright (C) 2023 Joe Baker (JoeBlakeB)
+// Advent of Code 2015 - Day 01: Not Quite Lisp
+// Usage:
+//     scripts/cppRun.sh 2015/01-Not-Quite-Lisp.cpp < 2015/inputs/01.txt
+
 #include <iostream>
 
 int main() {

@@ -1,3 +1,5 @@
+// Copyright (C) 2023 Joe Baker (JoeBlakeB)
+
 #include <iostream>
 #include <string>
 #include <vector>

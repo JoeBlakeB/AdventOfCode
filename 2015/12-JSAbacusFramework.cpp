@@ -1,3 +1,8 @@
+// Copyright (C) 2023 Joe Baker (JoeBlakeB)
+// Advent of Code 2015 - Day 12: JSAbacusFramework
+// Usage:
+//     scripts/cppRun.sh 2015/12-JSAbacusFramework.cpp < 2015/inputs/12.txt
+
 #include <iostream>
 #include <string>
 #include <vector>

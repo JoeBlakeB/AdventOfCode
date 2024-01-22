@@ -1,3 +1,8 @@
+// Copyright (C) 2023 Joe Baker (JoeBlakeB)
+// Advent of Code 2015 - Day 03: Perfectly Spherical Houses in a Vacuum
+// Usage:
+//     scripts/cppRun.sh 2015/03-Perfectly-Spherical-Houses-in-a-Vacuum.cpp < 2015/inputs/03.txt
+
 #include <iostream>
 #include <map>
 

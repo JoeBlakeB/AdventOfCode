@@ -1,3 +1,8 @@
+// Copyright (C) 2023 Joe Baker (JoeBlakeB)
+// Advent of Code 2015 - Day 02: I Was Told There Would Be No Maths
+// Usage:
+//     scripts/cppRun.sh 2015/02-I-Was-Told-There-Would-Be-No-Maths.cpp < 2015/inputs/02.txt
+
 #include <algorithm>
 #include <iostream>
 #include <sstream>

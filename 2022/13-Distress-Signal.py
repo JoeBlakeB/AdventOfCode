@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+# Copyright (C) 2022 Joe Baker (JoeBlakeB)
 # Day 13: Distress Signal
 
 import sys

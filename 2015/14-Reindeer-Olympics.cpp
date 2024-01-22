@@ -1,3 +1,8 @@
+// Copyright (C) 2023 Joe Baker (JoeBlakeB)
+// Advent of Code 2015 - Day 14: Reindeer Olympics
+// Usage:
+//     scripts/cppRun.sh 2015/14-Reindeer-Olympics.cpp < 2015/inputs/14.txt
+
 #include <iostream>
 #include <sstream>
 #include <string>

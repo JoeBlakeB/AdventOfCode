@@ -1,3 +1,8 @@
+// Copyright (C) 2023 Joe Baker (JoeBlakeB)
+// Advent of Code 2015 - Day 17: No Such Thing as Too Much Name
+// Usage:
+//     scripts/cppRun.sh 2015/17-No-Such-Thing-as-Too-Much-Name.cpp < 2015/inputs/17.txt
+
 #include <algorithm>
 #include <iostream>
 #include <stack>

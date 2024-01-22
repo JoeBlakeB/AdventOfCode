@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+# Copyright (C) 2023 Joe Baker (JoeBlakeB)
 # Advent of Code 2023 - Day 21: Step Counter
 # Usage:
 #     python 2023/21-Step-Counter.py < 2023/inputs/21.txt

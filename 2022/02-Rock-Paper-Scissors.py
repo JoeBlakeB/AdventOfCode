@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+# Copyright (C) 2022 Joe Baker (JoeBlakeB)
 # Day 2: Rock Paper Scissors
 
 with open("inputs/02.txt") as f:

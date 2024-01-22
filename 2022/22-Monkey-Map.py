@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+# Copyright (C) 2023 Joe Baker (JoeBlakeB)
 # Day 22: Monkey Map
 
 import re

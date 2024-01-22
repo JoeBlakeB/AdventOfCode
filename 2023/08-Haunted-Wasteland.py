@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+# Copyright (C) 2023 Joe Baker (JoeBlakeB)
 # Advent of Code 2023 - Day 8: Haunted Wasteland
 # Usage:
 #     python 2023/08-Haunted-Wasteland.py < 2023/inputs/08.txt

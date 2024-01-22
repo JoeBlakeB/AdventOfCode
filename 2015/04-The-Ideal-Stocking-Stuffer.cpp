@@ -1,3 +1,8 @@
+// Copyright (C) 2023 Joe Baker (JoeBlakeB)
+// Advent of Code 2015 - Day 04: The Ideal Stocking Stuffer
+// Usage:
+//     scripts/cppRun.sh 2015/04-The-Ideal-Stocking-Stuffer.cpp < 2015/inputs/04.txt
+
 #include <iostream>
 #include <openssl/evp.h>
 #include <openssl/md5.h>

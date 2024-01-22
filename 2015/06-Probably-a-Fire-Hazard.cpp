@@ -1,3 +1,8 @@
+// Copyright (C) 2023 Joe Baker (JoeBlakeB)
+// Advent of Code 2015 - Day 06: Probably a Fire Hazard
+// Usage:
+//     scripts/cppRun.sh 2015/06-Probably-a-Fire-Hazard.cpp < 2015/inputs/06.txt
+
 #include <iostream>
 #include <sstream>
 

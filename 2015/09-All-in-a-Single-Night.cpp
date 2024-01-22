@@ -1,3 +1,8 @@
+// Copyright (C) 2023 Joe Baker (JoeBlakeB)
+// Advent of Code 2015 - Day 09: All in a Single Night
+// Usage:
+//     scripts/cppRun.sh 2015/09-All-in-a-Single-Night.cpp < 2015/inputs/09.txt
+
 #include <algorithm>
 #include <iostream>
 #include <map>

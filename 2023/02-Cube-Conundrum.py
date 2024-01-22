@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+# Copyright (C) 2023 Joe Baker (JoeBlakeB)
 # Advent of Code 2023 - Day 2: Cube Conundrum
 # Usage:
 #     python 2023/02-Cube-Conundrum.py < 2023/inputs/02.txt

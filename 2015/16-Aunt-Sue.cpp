@@ -1,3 +1,8 @@
+// Copyright (C) 2023 Joe Baker (JoeBlakeB)
+// Advent of Code 2015 - Day 16: Aunt Sue
+// Usage:
+//     scripts/cppRun.sh 2015/16-Aunt-Sue.cpp < 2015/inputs/16.txt
+
 #include <iostream>
 #include <map>
 #include <sstream>

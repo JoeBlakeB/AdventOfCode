@@ -1,3 +1,4 @@
+// Copyright (C) 2023 Joe Baker (JoeBlakeB)
 // Advent of Code 2023 - Day 5: If You Give A Seed A Fertilizer
 // Usage:
 //     scripts/cppRun.sh 2023/05-If-You-Give-A-Seed-A-Fertilizer.cpp < 2023/inputs/05.txt

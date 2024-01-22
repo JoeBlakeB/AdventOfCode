@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+# Copyright (C) 2023 Joe Baker (JoeBlakeB)
 # Advent of Code 2023 - Day 11: Cosmic Expansion
 # Usage:
 #     python 2023/11-Cosmic-Expansion.py < 2023/inputs/11.txt

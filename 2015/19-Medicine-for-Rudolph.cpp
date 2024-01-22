@@ -1,3 +1,8 @@
+// Copyright (C) 2023 Joe Baker (JoeBlakeB)
+// Advent of Code 2015 - Day 19: Medicine for Rudolph
+// Usage:
+//     scripts/cppRun.sh 2015/19-Medicine-for-Rudolph.cpp < 2015/inputs/19.txt
+
 #include <algorithm>
 #include <iostream>
 #include <vector>

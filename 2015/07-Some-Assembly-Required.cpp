@@ -1,3 +1,8 @@
+// Copyright (C) 2023 Joe Baker (JoeBlakeB)
+// Advent of Code 2015 - Day 07: Some Assembly Required
+// Usage:
+//     scripts/cppRun.sh 2015/07-Some-Assembly-Required.cpp < 2015/inputs/07.txt
+
 #include <algorithm>
 #include <iostream>
 #include <map>

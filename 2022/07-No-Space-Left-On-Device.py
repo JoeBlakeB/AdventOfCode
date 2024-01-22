@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+# Copyright (C) 2022 Joe Baker (JoeBlakeB)
 # Day 7: No Space Left On Device
 
 with open("inputs/07.txt") as f:

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+# Copyright (C) 2022 Joe Baker (JoeBlakeB)
 # Day 18: Boiling Boulders
 
 with open("inputs/18.txt") as f:

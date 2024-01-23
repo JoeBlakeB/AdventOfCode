@@ -1,8 +1,11 @@
 // Copyright (C) 2024 Joe Baker (JoeBlakeB)
 
+#include <iterator>
 #include <vector>
 
 using namespace std;
+
+enum Direction { UP = 0, RIGHT = 1, DOWN = 2, LEFT = 3 };
 
 struct Coordinate {
     int x;
@@ -14,6 +17,16 @@ struct Coordinate {
 
     bool operator<(const Coordinate& other) const {
         return x < other.x || (x == other.x && y < other.y);
+    }
+
+    Coordinate operator()(Direction direction) const {
+        return {x + (direction == RIGHT) - (direction == LEFT),
+                y + (direction == DOWN) - (direction == UP)};
+    }
+
+    friend ostream& operator<<(ostream& os, const Coordinate& c) {
+        os << "(" << c.x << ", " << c.y << ")";
+        return os;
     }
 };
 
@@ -36,4 +49,7 @@ public:
 
     const int& width = _width;
     const int& height = _height;
+
+    typename vector<T>::iterator begin() { return map.begin(); }
+    typename vector<T>::iterator end() { return map.end(); }
 };

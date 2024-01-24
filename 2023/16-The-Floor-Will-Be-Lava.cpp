@@ -13,26 +13,7 @@
 
 using namespace std;
 
-class Contraption : public Grid<char> {
-public:
-    Contraption(istream &input) : Grid<char>(0, 0) {
-        string line;
-        getline(input, line);
-        _width = line.length();
-        do {
-            if ((int)line.length() != _width) {
-                cout << "Error: Map width is not consistent" << endl;
-                exit(1);
-            }
-            for (int i = 0; i < _width; i++) {
-                map.push_back(line[i]);
-            }
-            _height++;
-        } while (getline(input, line) && line != "");
-    }
-};
-
-unsigned int countEnergizedTiles(Contraption& contraption, Coordinate startCoord = {-1, 0}, Direction startDirection = RIGHT) {
+unsigned int countEnergizedTiles(const CharGrid& contraption, Coordinate startCoord = {-1, 0}, Direction startDirection = RIGHT) {
     struct EnergizedTile { bool horizontal; bool vertical; };
     Grid<EnergizedTile> energized(contraption.width, contraption.height, {false, false});
 
@@ -44,15 +25,15 @@ unsigned int countEnergizedTiles(Contraption& contraption, Coordinate startCoord
         stack.pop();
 
         Coordinate nextCoord = coord(direction);
-        char character = contraption(nextCoord);
+        char character = contraption[nextCoord];
 
-        if (nextCoord.x < 0 || nextCoord.x >= contraption.width || nextCoord.y < 0 || nextCoord.y >= contraption.height) {
+        if (!contraption.contains(nextCoord)) {
             continue;
         }
 
         bool horizontal = direction == LEFT || direction == RIGHT;
 
-        bool& energizedTile = horizontal ? energized(nextCoord).horizontal : energized(nextCoord).vertical;
+        bool& energizedTile = horizontal ? energized[nextCoord].horizontal : energized[nextCoord].vertical;
         if (energizedTile && character == '.') {
             continue;
         }
@@ -83,7 +64,7 @@ unsigned int countEnergizedTiles(Contraption& contraption, Coordinate startCoord
 }
 
 unsigned int findHighestPossibleRow(
-    Contraption& contraption,
+    const CharGrid& contraption,
     int startX, int endX,
     int startY, int endY,
     Direction direction
@@ -97,7 +78,7 @@ unsigned int findHighestPossibleRow(
     return maxEnergized;
 }
 
-unsigned int findHighestPossible(Contraption& contraption) {
+unsigned int findHighestPossible(const CharGrid& contraption) {
     return max(
         max(
             findHighestPossibleRow(contraption, -1, -1, 0, contraption.height, RIGHT),
@@ -111,7 +92,7 @@ unsigned int findHighestPossible(Contraption& contraption) {
 }
 
 int main() {
-    Contraption contraption(cin);
+    CharGrid contraption(cin);
     cout << "Energized Tile Count: " << countEnergizedTiles(contraption) << endl;
     cout << "Highest Energy Possible: " << findHighestPossible(contraption) << endl;
     return 0;

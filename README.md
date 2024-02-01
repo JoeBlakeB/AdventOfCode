@@ -3,7 +3,7 @@
 </h1>
 
 ![](https://img.shields.io/badge/Total_Stars-133_⭐-blue)
-![](https://img.shields.io/badge/Total_Lines_of_Code-3679-blue)
+![](https://img.shields.io/badge/Total_Lines_of_Code-3751-blue)
 
 <!-- AOC TILES BEGIN -->
 <h1 align="center">
@@ -51,7 +51,7 @@
 <a href="2023/14-Parabolic-Reflector-Dish.py">
   <img src=".github/AoCTiles/images/2023/14.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
 </a>
-<a href="None">
+<a href="2023/15-Lens-Library.cpp">
   <img src=".github/AoCTiles/images/2023/15.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
 </a>
 <a href="2023/16-The-Floor-Will-Be-Lava.cpp">

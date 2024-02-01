@@ -1,6 +1,7 @@
 // Copyright (C) 2024 Joe Baker (JoeBlakeB)
 
 #include <iterator>
+#include <iostream>
 #include <vector>
 
 enum Direction { UP = 0, RIGHT = 1, DOWN = 2, LEFT = 3 };

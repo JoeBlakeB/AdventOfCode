@@ -3,6 +3,7 @@
 // Usage:
 //     scripts/cppRun.sh 2023/23-A-Long-Walk.cpp < 2023/inputs/23.txt
 
+#include <algorithm>
 #include <iostream>
 #include <queue>
 #include <stack>

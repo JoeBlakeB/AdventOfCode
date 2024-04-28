@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (C) 2023 Joe Baker (JoeBlakeB)
+# Copyright (C) 2024 Joe Baker (JoeBlakeB)
 # Advent of Code 2023 - Day 19: Aplenty
 # Usage:
 #     python 2023/19-Aplenty.py < 2023/inputs/19.txt

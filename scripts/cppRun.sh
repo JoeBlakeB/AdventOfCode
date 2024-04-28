@@ -29,7 +29,7 @@ mkdir -p "$buildpath/${filename%/*}"
 # Get a list of all files to check for changes that are included in the c++ file
 
 files=$(grep -oP '#include\s*"\K[^"]*' "$filename" |
-        sed "s/^/${filename%/*}\//")
+        sed "s|^|${filename%/*}\/|")
 
 # Check all files hashes against last time it was built
 

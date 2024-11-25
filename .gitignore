@@ -4,3 +4,5 @@ __pycache__/
 inputs/
 bin/
 build/
+Desktop.ini
+thumbs.db

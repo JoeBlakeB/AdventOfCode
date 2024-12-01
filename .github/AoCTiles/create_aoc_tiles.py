@@ -94,7 +94,7 @@ def get_solution_paths_dict_for_years() -> dict[int, dict[int, list[str]]]:
         for solution in solutions:
             day = solution.name[:2]
             if re.match(r"\d{2}", day) and 1 <= int(day) <= 25:
-                year_dict[int(day)].append(str(solution))
+                year_dict[int(day)].append(str(solution).replace("\\", "/"))
 
         for day in range(1, 26):
             if year_dict[day] == []:

@@ -2,12 +2,12 @@
   JoeBlakeB's Advent of Code Solutions
 </h1>
 
-![](https://img.shields.io/badge/Total_Stars-155_⭐-blue)
-![](https://img.shields.io/badge/Total_Lines_of_Code-4502-blue)
+![](https://img.shields.io/badge/Total_Stars-157_⭐-blue)
+![](https://img.shields.io/badge/Total_Lines_of_Code-4543-blue)
 
 <!-- AOC TILES BEGIN -->
 <h1 align="center">
-  2024 - 18 ⭐
+  2024 - 20 ⭐
 </h1>
 <a href="2024/01-Historian-Hysteria.py">
   <img src=".github/AoCTiles/images/2024/01.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
@@ -30,7 +30,7 @@
 <a href="None">
   <img src=".github/AoCTiles/images/2024/07.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
 </a>
-<a href="None">
+<a href="2024/08-Resonant-Collinearity.cpp">
   <img src=".github/AoCTiles/images/2024/08.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
 </a>
 <a href="2024/09-Disk-Fragmenter.cpp">

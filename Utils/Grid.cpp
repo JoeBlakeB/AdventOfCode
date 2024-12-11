@@ -32,6 +32,26 @@ struct Coordinate {
         return x < other.x || (x == other.x && y < other.y);
     }
 
+    Coordinate operator+(const Coordinate& other) const {
+        return {x + other.x, y + other.y};
+    }
+
+    Coordinate operator-(const Coordinate& other) const {
+        return {x - other.x, y - other.y};
+    }
+
+    Coordinate& operator+=(const Coordinate& other) {
+        x += other.x;
+        y += other.y;
+        return *this;
+    }
+
+    Coordinate& operator-=(const Coordinate& other) {
+        x -= other.x;
+        y -= other.y;
+        return *this;
+    }
+
     Coordinate operator()(Direction direction) const {
         return {x + (direction == RIGHT) - (direction == LEFT),
                 y + (direction == DOWN) - (direction == UP)};

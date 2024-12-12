@@ -145,6 +145,17 @@ public:
             }
         }
     }
+
+    template<typename R>
+    R sumEach(std::function<R(Coordinate)> func) const {
+        R sum = 0;
+        for (int y = 0; y < _height; ++y) {
+            for (int x = 0; x < _width; ++x) {
+                sum += func(Coordinate{x, y});
+            }
+        }
+        return sum;
+    }
 };
 
 class CharGrid : public Grid<char> {

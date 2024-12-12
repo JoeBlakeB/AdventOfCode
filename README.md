@@ -2,12 +2,12 @@
   JoeBlakeB's Advent of Code Solutions
 </h1>
 
-![](https://img.shields.io/badge/Total_Stars-159_⭐-blue)
-![](https://img.shields.io/badge/Total_Lines_of_Code-4575-blue)
+![](https://img.shields.io/badge/Total_Stars-161_⭐-blue)
+![](https://img.shields.io/badge/Total_Lines_of_Code-4651-blue)
 
 <!-- AOC TILES BEGIN -->
 <h1 align="center">
-  2024 - 22 ⭐
+  2024 - 24 ⭐
 </h1>
 <a href="2024/01-Historian-Hysteria.py">
   <img src=".github/AoCTiles/images/2024/01.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
@@ -41,6 +41,9 @@
 </a>
 <a href="2024/11-Plutonian-Pebbles.py">
   <img src=".github/AoCTiles/images/2024/11.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
+</a>
+<a href="2024/12-Garden-Groups.cpp">
+  <img src=".github/AoCTiles/images/2024/12.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
 </a>
 <h1 align="center">
   2023 - 45 ⭐

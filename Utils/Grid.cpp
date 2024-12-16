@@ -16,6 +16,10 @@ Direction turnAntiClockwise(Direction dir) {
     return static_cast<Direction>((dir + 3) % 4);
 }
 
+Direction turn180Degrees(Direction dir) {
+    return static_cast<Direction>((dir + 2) % 4);
+}
+
 struct Coordinate {
     int x;
     int y;
@@ -88,6 +92,12 @@ public:
     const T &operator()(int x, int y) const { return grid[y * _width + x]; }
     const T &operator()(Coordinate c) const { return grid[c.y * _width + c.x]; }
     const T &operator[](Coordinate c) const { return grid[c.y * _width + c.x]; }
+
+    void replace(const Grid<T>& other) {
+        grid = other.grid;
+        _width = other._width;
+        _height = other._height;
+    }
 
     int size() const { return _width * _height; }
 

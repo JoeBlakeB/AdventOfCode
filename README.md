@@ -2,10 +2,16 @@
   JoeBlakeB's Advent of Code Solutions
 </h1>
 
-![](https://img.shields.io/badge/Total_Stars-170_⭐-blue)
-![](https://img.shields.io/badge/Total_Lines_of_Code-4983-blue)
+![](https://img.shields.io/badge/Total_Stars-172_⭐-blue)
+![](https://img.shields.io/badge/Total_Lines_of_Code-5026-blue)
 
 <!-- AOC TILES BEGIN -->
+<h1 align="center">
+  2025 - 2 ⭐
+</h1>
+<a href="2025/01-Secret-Entrance.cpp">
+  <img src=".github/AoCTiles/images/2025/01.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
+</a>
 <h1 align="center">
   2024 - 33 ⭐
 </h1>

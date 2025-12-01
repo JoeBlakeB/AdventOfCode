@@ -173,9 +173,12 @@ def find_recursive_solution_files(directory: Path) -> list[Path]:
     return solution_paths
 
 
-def parse_leaderboard(html: Path) -> dict[int, DayScores]:
+def parse_leaderboard(html: Path, year) -> dict[int, DayScores]:
     no_stars = "You haven't collected any stars... yet."
-    start = '<span class="leaderboard-daydesc-both"> *Time *Rank *Score</span>\n'
+    if year >= 2025:
+        start = '<span class="leaderboard-daydesc-both">-Part 2-</span>\n'
+    else:
+        start = '<span class="leaderboard-daydesc-both"> *Time *Rank *Score</span>\n'
     end = "</pre>"
     if no_stars in html:
         return {}
@@ -187,6 +190,8 @@ def parse_leaderboard(html: Path) -> dict[int, DayScores]:
         day, *scores = re.split(r"\s+", line.strip())
         # replace "-" with None to be able to handle the data later, like if no score existed for the day
         scores = [s if s != "-" else None for s in scores]
+        if year >= 2025:
+            scores = [item for tup in [(s, None, None) for s in scores] for item in tup]
         assert len(scores) in (3, 6), f"Number scores for {day=} ({scores}) are not 3 or 6."
         leaderboard[int(day)] = DayScores(*scores)
     return leaderboard
@@ -202,7 +207,7 @@ def request_leaderboard(year: int) -> dict[int, DayScores]:
         cookies={"session": session_cookie},
     ).text
     
-    return parse_leaderboard(data)
+    return parse_leaderboard(data, year)
 
 
 class HTMLTag:
@@ -332,10 +337,14 @@ def generate_day_tile_image(day: str, year: str, languages: list[str], day_score
                 drawer.line((160, 35 + y, 150, 25 + y), fill=font_color, width=2)
                 drawer.line((160, 35 + y, 180, 15 + y), fill=font_color, width=2)
                 continue
-            drawer.text((105, 25 + y), "time", align="right", font=secondary_font(10), **text_kwargs)
-            drawer.text((105, 35 + y), "rank", align="right", font=secondary_font(10), **text_kwargs)
-            drawer.text((143, 3 + y), format_time(time), align="right", font=secondary_font(18), **text_kwargs)
-            drawer.text((133, 23 + y), f"{rank:>6}", align="right", font=secondary_font(18), **text_kwargs)
+            if int(year) < 2025:
+                drawer.text((105, 25 + y), "time", align="right", font=secondary_font(10), **text_kwargs)
+                drawer.text((105, 35 + y), "rank", align="right", font=secondary_font(10), **text_kwargs)
+                drawer.text((143, 3 + y), format_time(time), align="right", font=secondary_font(18), **text_kwargs)
+                drawer.text((133, 23 + y), f"{rank:>6}", align="right", font=secondary_font(18), **text_kwargs)
+            else:
+                drawer.text((105, 26 + y), "time", align="right", font=secondary_font(12), **text_kwargs)
+                drawer.text((136, 11 + y), format_time(time), align="right", font=secondary_font(20), **text_kwargs)
         else:
             drawer.line((140, 15 + y, 160, 35 + y), fill=font_color, width=2)
             drawer.line((140, 35 + y, 160, 15 + y), fill=font_color, width=2)

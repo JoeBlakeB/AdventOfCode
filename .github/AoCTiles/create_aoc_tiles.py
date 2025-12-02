@@ -53,6 +53,7 @@ CREATE_ALL_DAYS = False
 # Instead of showing the time and rank you achieved this just shows whether
 # it was completed with a checkmark
 # SHOW_CHECKMARK_INSTEAD_OF_TIME_RANK = False
+SHOW_RANK = False
 
 # The year and day pattern to detect directories. For example, if your day folders are
 # called "day1" to "day25" then set the pattern to r"day\d{1,2}". The script extracts
@@ -285,7 +286,7 @@ def format_time(time: str) -> str:
         formatted = time
     else:
         h, m, s = time.split(":")
-        formatted = f">{h}h" if int(h) >= 1 else f"{m:02}:{s:02}"
+        formatted = f"{h:02}:{m:02}:{s:02}"
     return f"{formatted:>5}"
 
 
@@ -333,18 +334,19 @@ def generate_day_tile_image(day: str, year: str, languages: list[str], day_score
         time, rank = getattr(day_scores, f"time{part}", None), getattr(day_scores, f"rank{part}", None)
         if day_scores is not None and time is not None:
             drawer.text((104, -5 + y), f"P{part} ", align="left", font=main_font(25), **text_kwargs)
-            if int(year) < 2022: # SHOW_CHECKMARK_INSTEAD_OF_TIME_RANK
+            formattedTime = format_time(time)
+            if ">" in formattedTime: # int(year) < 2022: # SHOW_CHECKMARK_INSTEAD_OF_TIME_RANK
                 drawer.line((160, 35 + y, 150, 25 + y), fill=font_color, width=2)
                 drawer.line((160, 35 + y, 180, 15 + y), fill=font_color, width=2)
                 continue
-            if int(year) < 2025:
+            elif SHOW_RANK:
                 drawer.text((105, 25 + y), "time", align="right", font=secondary_font(10), **text_kwargs)
                 drawer.text((105, 35 + y), "rank", align="right", font=secondary_font(10), **text_kwargs)
                 drawer.text((143, 3 + y), format_time(time), align="right", font=secondary_font(18), **text_kwargs)
                 drawer.text((133, 23 + y), f"{rank:>6}", align="right", font=secondary_font(18), **text_kwargs)
             else:
-                drawer.text((105, 26 + y), "time", align="right", font=secondary_font(12), **text_kwargs)
-                drawer.text((136, 11 + y), format_time(time), align="right", font=secondary_font(20), **text_kwargs)
+                drawer.text((136, 10 + y), "time", align="right", font=secondary_font(13), **text_kwargs)
+                drawer.text((105, 25 + y), format_time(time), align="right", font=secondary_font(19), **text_kwargs)
         else:
             drawer.line((140, 15 + y, 160, 35 + y), fill=font_color, width=2)
             drawer.line((140, 35 + y, 160, 15 + y), fill=font_color, width=2)

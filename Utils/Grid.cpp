@@ -86,6 +86,30 @@ public:
     Grid(int w, int h) : _width(w), _height(h), grid(w * h) {}
     Grid(int w, int h, const T& value) : _width(w), _height(h), grid(w * h, value) {}
 
+    Grid(const Grid<T>& other)
+        : _width(other._width), _height(other._height), grid(other.grid), width(_width), height(_height) {}
+
+    Grid<T>& operator=(const Grid<T>& other) {
+        if (this != &other) {
+            _width = other._width;
+            _height = other._height;
+            grid = other.grid;
+        }
+        return *this;
+    }
+
+    Grid(Grid<T>&& other) noexcept
+        : _width(other._width), _height(other._height), grid(std::move(other.grid)), width(_width), height(_height) {}
+
+    Grid<T>& operator=(Grid<T>&& other) noexcept {
+        if (this != &other) {
+            _width = other._width;
+            _height = other._height;
+            grid = std::move(other.grid);
+        }
+        return *this;
+    }
+
     T &operator()(int x, int y) { return grid[y * _width + x]; }
     T &operator()(Coordinate c) { return grid[c.y * _width + c.x]; }
     T &operator[](Coordinate c) { return grid[c.y * _width + c.x]; }
@@ -111,6 +135,28 @@ public:
         return x >= 0 && x < _width && y >= 0 && y < _height; }
     bool contains(Coordinate c) const {
         return c.x >= 0 && c.x < _width && c.y >= 0 && c.y < _height; }
+
+    std::vector<Coordinate> neighbors(Coordinate c, bool includeDiagonals) const {
+        std::vector<Coordinate> res;
+        const Coordinate deltas[8] = {{1,0},{-1,0},{0,1},{0,-1},{1,1},{1,-1},{-1,1},{-1,-1}};
+        int count = includeDiagonals ? 8 : 4;
+        for (int i = 0; i < count; ++i) {
+            const Coordinate &d = deltas[i];
+            Coordinate n{c.x + d.x, c.y + d.y};
+            if (contains(n)) res.push_back(n);
+        }
+        return res;
+    }
+
+    std::vector<T> neighborValues(Coordinate c, bool includeDiagonals) const {
+        std::vector<T> vals;
+        for (const auto &nc : neighbors(c, includeDiagonals)) vals.push_back((*this)(nc));
+        return vals;
+    }
+
+    void forEachNeighbor(Coordinate c, std::function<void(Coordinate)> func, bool includeDiagonals) const {
+        for (const auto &nc : neighbors(c, includeDiagonals)) func(nc);
+    }
 
     void print() const {
         for (int y = 0; y < _height; ++y) {

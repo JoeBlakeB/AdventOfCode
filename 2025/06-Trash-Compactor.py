@@ -38,3 +38,9 @@ for column in list(zip(*INPUT))[::-1]:
     if currentNumber: numbers.append(currentNumber)
 
 print("cephalopod worksheet grand total:", grandTotal)
+
+print("cursed cephalopod oneliner:",
+    sum([sum(nums) if op == "+" else math.prod(nums) for nums, op in 
+    [([int(n) for n in p[:-1]], p[-1]) for p in [problem.strip().split(" ") for problem in 
+    (" ".join(["".join(l).replace(" ", "").replace("+", " +").replace("*", " *")
+    if not all(a == " " for a in l) else "-" for l in list(zip(*INPUT))[::-1]]).split("-"))]]]))

@@ -3,7 +3,7 @@
 </h1>
 
 ![](https://img.shields.io/badge/Total_Stars-182_⭐-blue)
-![](https://img.shields.io/badge/Total_Lines_of_Code-5177-blue)
+![](https://img.shields.io/badge/Total_Lines_of_Code-5182-blue)
 
 <!-- AOC TILES BEGIN -->
 <h1 align="center">

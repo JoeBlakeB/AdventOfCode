@@ -165,14 +165,8 @@
 <a href="2023/21-Step-Counter.py">
   <img src=".github/AoCTiles/images/2023/21.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
 </a>
-<a href="None">
-  <img src=".github/AoCTiles/images/2023/22.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
-</a>
 <a href="2023/23-A-Long-Walk.cpp">
   <img src=".github/AoCTiles/images/2023/23.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
-</a>
-<a href="None">
-  <img src=".github/AoCTiles/images/2023/24.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
 </a>
 <a href="2023/25-Snowverload.py">
   <img src=".github/AoCTiles/images/2023/25.png" width="161px" style="style='min-width: calc(20 % - 4px);'">

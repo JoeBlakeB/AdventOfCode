@@ -402,11 +402,11 @@ def handle_year(year: int, day_to_solutions: dict[int, list[str]]):
     with html.tag("h1", align="center"):
         stars = sum((ds.time1 is not None) + (ds.time2 is not None) for ds in leaderboard.values() if ds is not None)
         html.push(f"{year} - {stars} ⭐")
-    try:
-        max_day = 25 if CREATE_ALL_DAYS else max(*day_to_solutions, *leaderboard)
-    except TypeError:
-        max_day = 0
-    fill_empty_days_in_dict(day_to_solutions, max_day)
+    # try:
+    #     max_day = 25 if CREATE_ALL_DAYS else max(*day_to_solutions, *leaderboard)
+    # except TypeError:
+    #     max_day = 0
+    # fill_empty_days_in_dict(day_to_solutions, max_day)
 
     completed_solutions = dict()
     for day, solutions in sorted(day_to_solutions.items()):

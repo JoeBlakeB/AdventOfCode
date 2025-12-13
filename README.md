@@ -7,7 +7,7 @@
 
 <!-- AOC TILES BEGIN -->
 <h1 align="center">
-  2025 - 21 ⭐
+  2025 - 21/24 ⭐
 </h1>
 <a href="2025/01-Secret-Entrance.cpp">
   <img src=".github/AoCTiles/images/2025/01.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
@@ -46,7 +46,7 @@
   <img src=".github/AoCTiles/images/2025/12.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
 </a>
 <h1 align="center">
-  2024 - 33 ⭐
+  2024 - 33/50 ⭐
 </h1>
 <a href="2024/01-Historian-Hysteria.py">
   <img src=".github/AoCTiles/images/2024/01.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
@@ -100,7 +100,7 @@
   <img src=".github/AoCTiles/images/2024/17.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
 </a>
 <h1 align="center">
-  2023 - 45 ⭐
+  2023 - 45/50 ⭐
 </h1>
 <a href="2023/01-Trebuchet.py">
   <img src=".github/AoCTiles/images/2023/01.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
@@ -172,7 +172,7 @@
   <img src=".github/AoCTiles/images/2023/25.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
 </a>
 <h1 align="center">
-  2022 - 50 ⭐
+  2022 - 50/50 ⭐
 </h1>
 <a href="2022/01-Calorie-Counting.py">
   <img src=".github/AoCTiles/images/2022/01.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
@@ -250,7 +250,7 @@
   <img src=".github/AoCTiles/images/2022/25.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
 </a>
 <h1 align="center">
-  2015 - 42 ⭐
+  2015 - 42/50 ⭐
 </h1>
 <a href="2015/01-Not-Quite-Lisp.cpp">
   <img src=".github/AoCTiles/images/2015/01.png" width="161px" style="style='min-width: calc(20 % - 4px);'">

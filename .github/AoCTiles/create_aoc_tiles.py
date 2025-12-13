@@ -401,7 +401,10 @@ def handle_year(year: int, day_to_solutions: dict[int, list[str]]):
     html = HTML()
     with html.tag("h1", align="center"):
         stars = sum((ds.time1 is not None) + (ds.time2 is not None) for ds in leaderboard.values() if ds is not None)
-        html.push(f"{year} - {stars} ⭐")
+        if year < 2025:
+            html.push(f"{year} - {stars}/50 ⭐")
+        else:
+            html.push(f"{year} - {stars}/24 ⭐")
     # try:
     #     max_day = 25 if CREATE_ALL_DAYS else max(*day_to_solutions, *leaderboard)
     # except TypeError:

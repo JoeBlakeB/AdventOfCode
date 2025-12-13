@@ -3,7 +3,7 @@
 </h1>
 
 ![](https://img.shields.io/badge/Total_Stars-191_⭐-blue)
-![](https://img.shields.io/badge/Total_Lines_of_Code-5389-blue)
+![](https://img.shields.io/badge/Total_Lines_of_Code-5416-blue)
 
 <!-- AOC TILES BEGIN -->
 <h1 align="center">
@@ -39,10 +39,10 @@
 <a href="2025/10-Factory.py">
   <img src=".github/AoCTiles/images/2025/10.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
 </a>
-<a href="None">
+<a href="2025/11-Reactor.py">
   <img src=".github/AoCTiles/images/2025/11.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
 </a>
-<a href="None">
+<a href="2025/12-Christmas-Tree-Farm.py">
   <img src=".github/AoCTiles/images/2025/12.png" width="161px" style="style='min-width: calc(20 % - 4px);'">
 </a>
 <h1 align="center">
